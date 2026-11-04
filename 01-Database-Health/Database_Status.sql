@@ -1,12 +1,12 @@
-Project: SQL Server Support Toolkit
-Script: Database_Status.sql
-Purpose: Check the status of SQL Server databases
+/* project: sql server support toolkit
+script: database_status.sql
+purpose: check the status of sql server databases */
 
 
 select
-    name AS DatabaseName,
-    state_desc AS DatabaseStatus,
-    recovery_model_desc AS RecoveryModel,
-    create_date AS CreatedDate
+    name as databasename,
+    state_desc as databasestatus,
+    recovery_model_desc as recoverymodel,
+    create_date as createddate
 from sys.databases
 order by name;
